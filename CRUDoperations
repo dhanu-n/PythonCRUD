@@ -1,0 +1,25 @@
+#CRUD operations:
+students={}
+while True:
+    print("\n1.Add 2.View 3.Update 4.Delete 5.Exit")
+    option=input("Enter option: ")
+#add:
+    if option=="1":
+        roll=input("Roll.No: ")
+        name=input("Name: ")
+        students[roll] = name
+#view:
+    elif option=="2":
+        print(students)
+#Update:
+    elif option=="3":
+        roll=input("Roll.No to update: ")
+        if roll in students:
+            students[roll]=input("New Name: ")
+#delete :
+    elif option=="4":
+        roll=input("Roll.No to delete: ")
+        students.pop(roll, None)
+
+    elif option=="5":
+        break
